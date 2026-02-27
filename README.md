@@ -13,7 +13,7 @@ In Slack, type:
 | South | 54000.00 |
 | West | 40500.00 |
 
-![Alt text](image-url-or-path "Demo_image")
+![Alt text](Demo/demo_img1.png "Demo_image")
 
 ### Features
 * **Natural Language:** Query your database without writing SQL.
