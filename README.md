@@ -48,5 +48,3 @@ In Slack, type:
    ```bash
    docker compose up -d
    python app.py
-
-   
