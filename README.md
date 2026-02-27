@@ -28,16 +28,11 @@ In Slack, type:
 2. **Set up environment:**
    ```bash
    python -m venv bot_venv
-  ####Windows
-  ```bash
-  .\bot_venv\Scripts\activate
-  ```
- ####Linux/Mac
-   ```bash
-  source bot_venv/bin/activate
+   .\bot_venv\Scripts\activate (#windows)
+   source bot_venv/bin/activate (#linux/mac)
    
-  pip install -r requirements.txt
-```
+   pip install -r requirements.txt
+   ```
 3. **Configure:**
    Create a .env file with your credentials:
    ```bash
