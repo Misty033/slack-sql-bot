@@ -116,4 +116,9 @@ def ask_data():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    flask_app.run(port=3000)
+    port = int(os.getenv("PORT", 3000))
+    flask_app.run(
+        host="0.0.0.0",
+        port=port,
+        debug=False
+    )
