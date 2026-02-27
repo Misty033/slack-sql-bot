@@ -13,7 +13,7 @@ The Slack NL→SQL bot is deployed on Railway and can be tested in any Slack wor
 - In Slack, type:
   **/ask-data show revenue by region for 2025-09-01**
 - The bot will respond using the Railway deployment and database.
-> ⚠️ Only workspaces where the app is installed can use the slash command.
+> Note: Only workspaces where the app is installed can use the slash command.
 
 or
 
