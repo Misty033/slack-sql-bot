@@ -15,7 +15,11 @@ In Slack, type:
 | West | 40500.00 |
 
 ![Alt text](Demo/demo_img1.png "Demo_image")
-![Demo Video](Demo/demo_video.gif "Demo Video")
+
+<video width="600" controls>
+  <source src="Demo/demo_video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Features
 * **Natural Language:** Query your database without writing SQL.
