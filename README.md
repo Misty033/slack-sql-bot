@@ -6,7 +6,6 @@ A minimal Slack integration that allows users to query a PostgreSQL database usi
 
 In Slack, type:
 `/ask-data show revenue by region for 2025-09-01`
-
 **Bot response:**
 | Region | Revenue |
 | :--- | :--- |
@@ -16,10 +15,7 @@ In Slack, type:
 
 ![Alt text](Demo/demo_img1.png "Demo_image")
 
-<video width="600" controls>
-  <source src="Demo/demo_video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Demo Video](Demo/demo_video.mp4)
 
 ### Features
 * **Natural Language:** Query your database without writing SQL.
