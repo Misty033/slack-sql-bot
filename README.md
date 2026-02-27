@@ -13,6 +13,12 @@ In Slack, type:
 | South | 54000.00 |
 | West | 40500.00 |
 
+<p align="center">
+  <figure>
+    <img src="(Demo/demo_img1.png" alt="Bot response of **/ask-data show revenue by region for 2025-09-01**" width="300">
+    <figcaption>Figure 1: Project Logo</figcaption>
+  </figure>
+</p>
 ![Alt text](Demo/demo_img1.png "Demo_image")
 
 [Demo Video](Demo/demo_video.mp4)
