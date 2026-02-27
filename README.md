@@ -54,3 +54,14 @@ In Slack, type:
    ```bash
    docker compose up -d
    python app.py
+
+### Error Handling:
+The bot uses a "fail-fast" approach:
+
+- If LangChain generates invalid SQL, the database will raise an error.
+- The Flask app catches these exceptions and displays them inside a Markdown   code block in Slack to help the user debug their query.
+
+### Future Enhancements:
+- **Security:** Implement SQL injection prevention and input validation.
+- **Scalability:** Enable multi-table join support through RAG (Retrieval-     Augmented Generation) for schema metadata.
+- **UX:** Replace text tables with Slack Block Kit charts or buttons for       data filtering.
