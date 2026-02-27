@@ -2,6 +2,8 @@
 
 A minimal Slack integration that allows users to query a PostgreSQL database using natural language. It uses LangChain and llm to translate user questions into SQL, executes them, and returns formatted results directly in Slack.
 
+![Alt Image](workflow.png "Workflow of the pipeline")
+
 ## Try!!
 The Slack NL→SQL bot is deployed on Railway and can be tested in any Slack workspace.
 
