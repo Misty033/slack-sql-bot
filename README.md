@@ -4,6 +4,7 @@ A minimal Slack integration that allows users to query a PostgreSQL database usi
 
 ### Demo   
 [Demo Video](Demo/demo_video.mp4)
+
 In Slack, type:
 `/ask-data show revenue by region for 2025-09-01`
 **Bot response:**
