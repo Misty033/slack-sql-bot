@@ -116,13 +116,9 @@ def ask_data():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    # Only run dev server locally (not on Railway with Gunicorn)
     port = int(os.getenv("PORT", 3000))
-    is_production = os.getenv("RAILWAY_ENVIRONMENT") is not None
-    
-    if not is_production:
-        flask_app.run(
-            host="0.0.0.0",
-            port=port,
-            debug=False
-        )
+    flask_app.run(
+        host="0.0.0.0",
+        port=port,
+        debug=False
+    )
