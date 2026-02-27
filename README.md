@@ -3,7 +3,7 @@
 A minimal Slack integration that allows users to query a PostgreSQL database using natural language. It uses LangChain and llm to translate user questions into SQL, executes them, and returns formatted results directly in Slack.
 
 ### Demo   
-
+[Demo Video](Demo/demo_video.mp4)
 In Slack, type:
 `/ask-data show revenue by region for 2025-09-01`
 **Bot response:**
@@ -19,8 +19,6 @@ In Slack, type:
     <figcaption>Figure 1: Bot response screenshot</figcaption>
   </figure>
 </p>
-
-[Demo Video](Demo/demo_video.mp4)
 
 ### Features
 * **Natural Language:** Query your database without writing SQL.
