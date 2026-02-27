@@ -22,9 +22,60 @@ In Slack, type:
 </p>
 
 ### Features
-* **Natural Language:** Query your database without writing SQL.
-* **Simple Setup:** Uses a single slash command (`/ask-data`).
-* **Fast:** Direct execution on Postgres with instant replies.
+- Slack slash command /ask-data "<question>"
+- Natural Language → SQL conversion using LangChain
+- Direct SQL execution on Postgres
+- Compact and formatted replies in Slack
+- Minimal error handling (SQL errors returned in code blocks)
+
+### Tech Stack
+- Python 
+- Flask – web server for Slack events
+- LangChain – NLP to SQL conversion
+- PostgreSQL – database, hosted on Docker for local dev or Railway in production
+- Slack API – slash commands and responses
+- Docker – containerized Postgres for local development
+- Railway.app – production DB hosting
+
+### Tools & Notes:
+| Step      | Tool             | Role                             |
+| --------- | ---------------- | -------------------------------- |
+| NL→SQL    | LangChain        | Generate SQL from user query     |
+| Webserver | Flask            | Receives Slack commands          |
+| DB        | Postgres         | Stores data and executes queries |
+| Slack     | Slack API        | Slash command & bot response     |
+| Dev DB    | Docker Postgres  | Isolated local testing           |
+| Prod DB   | Railway Postgres | Cloud database for production    |
+
+
+### Database Setup:
+```bash
+CREATE DATABASE analytics;
+\c analytics
+
+CREATE TABLE IF NOT EXISTS public.sales_daily (
+    date date NOT NULL,
+    region text NOT NULL,
+    category text NOT NULL,
+    revenue numeric(12,2) NOT NULL,
+    orders integer NOT NULL,
+    created_at timestamptz NOT NULL DEFAULT now(),
+    PRIMARY KEY (date, region, category)
+);
+
+INSERT INTO public.sales_daily (date, region, category, revenue, orders) VALUES
+('2025-09-01','North','Electronics',125000.50,310),
+('2025-09-01','South','Grocery',54000.00,820),
+('2025-09-01','West','Fashion',40500.00,190),
+('2025-09-02','North','Electronics',132500.00,332),
+('2025-09-02','West','Fashion',45500.00,210),
+('2025-09-02','East','Grocery',62000.00,870);
+```
+
+### Docker Setup:
+Set docker-compose.yml
+* Start container: docker compose up -d
+* Connect: psql -h localhost -U postgres -d slack_bot
 
 ### Installation
 1. **Clone the repo:**
@@ -43,7 +94,7 @@ In Slack, type:
    Create a .env file with your credentials:
    ```bash
    SLACK_BOT_TOKEN=xoxb-your-token
-   SLACK_SIGNING_SECRET=your-signing-secret
+   SLACK_SIGNING_SECRET=your-signing-secre
    DB_HOST=localhost
    DB_PORT=5432
    DB_NAME=slack_bot
@@ -56,15 +107,15 @@ In Slack, type:
    python app.py
 
 ### Error Handling:
-The bot uses a "fail-fast" approach:
-
 - If LangChain generates invalid SQL, the database will raise an error.
 - The Flask app catches these exceptions and displays them inside a Markdown   code block in Slack to help the user debug their query.
+- Bot does not attempt validation, keeping it minimal.
 
 ### Future Enhancements:
-- **Security:** Implement SQL injection prevention and input validation.
-- **Scalability:** Enable multi-table join support through RAG (Retrieval-     Augmented Generation) for schema metadata.
-- **UX:** Replace text tables with Slack Block Kit charts or buttons for       data filtering.
+- Add a button to export CSV for the last query.
+- Add a small chart image for a date range query.
+- Add caching to speed up repeated questions.
+- In a follow-up phase, add safeguards and validation.
 
 ### MIT License
 Copyright (c) 2026 Misty Roy
