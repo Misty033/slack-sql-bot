@@ -2,7 +2,7 @@
 
 ## Try
 You can test the Slack NL→SQL bot using the deployed Railway URL:
-[Slack NL→SQL Bot - Test it here](https://slack-sql-bot-production.up.railway.app/slack/events)
+[Slack NL→SQL Bot](https://slack-sql-bot-production.up.railway.app/slack/events)
 > Note: You need access to the Slack workspace where the bot is installed.
 
 A minimal Slack integration that allows users to query a PostgreSQL database using natural language. It uses LangChain and llm to translate user questions into SQL, executes them, and returns formatted results directly in Slack.
