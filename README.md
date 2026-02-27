@@ -15,8 +15,8 @@ In Slack, type:
 
 <p align="center">
   <figure>
-    <img src="(Demo/demo_img1.png" alt="Bot response of **/ask-data show revenue by region for 2025-09-01**" width="300">
-    <figcaption>Figure 1: Project Logo</figcaption>
+    <img src="Demo/demo_img1.png" alt="Bot response of /ask-data show revenue by region for 2025-09-01" width="300">
+    <figcaption>Figure 1: Bot response screenshot</figcaption>
   </figure>
 </p>
 ![Alt text](Demo/demo_img1.png "Demo_image")
