@@ -4,7 +4,7 @@ A minimal Slack integration that allows users to query a PostgreSQL database usi
 
 <p align="center">
   <figure>
-    <img src="workflow.png" alt="Workflow of the pipeline" width:"100">
+    <img src="workflow-architecture.png" alt="Workflow of the pipeline" width:"100">
     <figcaption>Figure 1: Workflow of the pipeline </figcaption>
   </figure>
 </p>
