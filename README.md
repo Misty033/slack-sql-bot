@@ -65,3 +65,6 @@ The bot uses a "fail-fast" approach:
 - **Security:** Implement SQL injection prevention and input validation.
 - **Scalability:** Enable multi-table join support through RAG (Retrieval-     Augmented Generation) for schema metadata.
 - **UX:** Replace text tables with Slack Block Kit charts or buttons for       data filtering.
+
+### MIT License
+Copyright (c) 2026 Misty Roy
